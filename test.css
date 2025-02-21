@@ -5,8 +5,13 @@
  }
  
 body{
-    color: #f4f2ee;
+    /* color: #fff; */
+    background-color: #f4f2ee;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+my-comment{
+    background-color: #ffff;
 }
 
 .center__display{
@@ -26,7 +31,7 @@ body{
     position: absolute;
     left: 0;
     margin-top: 12px;
-    background: #fff;
+    background: #f2f2f2;
     font-size: 20px;
     display: flex;
     justify-content: center;

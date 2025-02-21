@@ -5,7 +5,8 @@
  }
  
 body{
-    color: #fff;
+    color: #293241;
+    background-color: #f4f2ee;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,47 +22,24 @@ body{
     border-bottom: 1px solid #eee;
 }
 
-
 .top .likes__count{
     position: absolute;
+    top: 0;
     left: 0;
-    margin-top: 12px;
-    background: #f2f2f2;
+    background: #ffadad;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    border-radius: 20px;
-    flex-direction: row;
+    border-bottom-right-radius: 20px;
+    color: white;
 }
 
 .likes__count small{
     font-size: 20px;
     margin-left: 5px;
 }
-
-.fas{
-    color: #0056f7f6;
-}
-
-.far{
-    color: #0056f7f6;
-}
-.top .likes__icon{
-    font-size: 30px;
-    cursor: pointer;
-    margin: 15px;
-    flex-direction: row;
-    
-}
-
-.comment__bottom .likes__icon--comment{
-    font-size: 20px;
-    margin-right: 20px;
-    color: #eee;
-}
-
 
 .top video{
     object-fit: fill;
@@ -70,8 +48,8 @@ body{
 form{
     display: grid;
     width: 100%;
-    /* height: 80px; */
-    /* grid-template-columns: 10% 80% 10%; */
+    height: 80px;
+    grid-template-columns: 5% 80% 15%;
 }
 
 .form__info input{
@@ -88,7 +66,11 @@ form{
     color: #ddd;
 }
 
-
+.top .heart__icon{
+    color: #ffadad;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 .top button{
     background-color: #48cae4;
@@ -134,9 +116,7 @@ form{
 .comment__info .nickname{
     color: #aaa;
 }
-.comment{
-    color: #868282;
-}
+
 .comment__info .comment{
     margin: 5px 0;
 }
@@ -145,10 +125,22 @@ form{
     display: flex;
 }
 
+.comment__bottom .heart__icon--comment{
+    font-size: 20px;
+    margin-right: 20px;
+    color: #eee;
+}
 
-
-
-
+/* add with JS */
+.heart__icon--comment .fas.positive{
+    color: #ffadad;
+}
+.fas{
+    color: rgba(0, 0, 255, 0.651);
+}
+.far{
+    color: rgba(0, 0, 255, 0.336);
+}
 .comment__bottom button{
     border: none;
     background: transparent;

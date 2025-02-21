@@ -65,7 +65,7 @@ function addLikes(){
 function resetForm(){
     userName.value = ''
     comment.value = ''
-    // likeIcon.innerHTML = `<i class="far fa-heart"></i>`
+    likeIcon.innerHTML = `<i class="far fa-heart"></i>`
     positiveFeedback = false
 }
 
