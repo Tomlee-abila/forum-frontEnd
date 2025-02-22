@@ -2,23 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test.css">
-        <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Forum</title>
+    <title>Forum Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sidebar h2 {
+            font-size: 22px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #34495e;
+        }
+        .dropdown {
+            display: none;
+            flex-direction: column;
+            background: #34495e;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        .dropdown a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .dropdown a:hover {
+            background: #2c3e50;
+        }
+        .feed {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .post {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .post h3 {
+            margin-bottom: 10px;
+        }
+        .post p {
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("categoriesDropdown");
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "flex";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="post_container center__display">
-        <div class="post">
-            <my-post></my-post>
-
-            <my-comment></my-comment>
+    <div class="sidebar">
+        <h2>Forum</h2>
+        <a href="#">Home</a>
+        <a href="#" onclick="toggleDropdown()">Categories</a>
+        <div class="dropdown" id="categoriesDropdown">
+            <a href="#">&#8627; Technology</a>
+            <a href="#">&#8627; Science</a>
+            <a href="#">&#8627; Entertainment</a>
+            <a href="#">&#8627; Sports</a>
         </div>
-        
+        <a href="#">My Posts</a>
+        <a href="#">Liked Posts</a>
+        <a href="#">Profile</a>
     </div>
-    <script src="elements.js"></script>
-    <script src="test.css"></script>
+    <div class="feed">
+        <div class="post">
+            <h3>First Post</h3>
+            <p>This is an example post in the forum.</p>
+        </div>
+        <div class="post">
+            <h3>Second Post</h3>
+            <p>Another example post content.</p>
+        </div>
+    </div>
 </body>
 </html>
